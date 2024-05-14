@@ -38,7 +38,7 @@ const Contact = () => {
     try {
       const response = await apiConnector(
         "POST",
-        "http://localhost:4000/my-portfolio/sendmail",
+        process.env.REACT_APP_BASE_URL+"/sendmail",
         data
       );
       if (!response?.data?.success) {
